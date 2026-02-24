@@ -1,0 +1,6 @@
+/* Mirroring the Spring styles */
+.navbar { border-top: 4px solid #6db33f; background-color: #34302d; }
+.navbar-brand { background: url("../images/spring-logo-dataflow.png") no-repeat; width: 229px; height: 46px; display: inline-block; }
+.btn-primary { background-color: #34302D; border-color: #6db33f; color: #fff; margin-top: 10px; }
+.xd-container { margin-top: 40px; margin-bottom: 100px; }
+.table > thead > tr > th { background-color: #3c3834; color: #f1f1f1; }
