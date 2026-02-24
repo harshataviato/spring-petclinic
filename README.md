@@ -1,21 +1,15 @@
 # Node.js PetClinic
 
-This is a port of the famous Spring PetClinic application to Node.js, built by a Senior Engineer at Google.
+A pragmatic Node.js port of the classic Spring PetClinic.
 
-## Prerequisites
-- Node.js (v18 or higher)
-- NPM
+## Installation
 
-## Setup and Installation
-
-1. **Install Dependencies**
+1. **Install Dependencies**:
    ```bash
    npm install
 
-3. **Running the Server**
-   Start the application:
+3. **Start Application**:
    ```bash
    npm start
-
----
+npm test
 

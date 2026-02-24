@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "setup": "node scripts/seed.js"
+    "setup": "node scripts/seed.js",
+    "test": "mocha tests/**/*.test.js --exit --timeout 10000"
   },
   "dependencies": {
     "express": "^4.18.2",
@@ -15,5 +16,10 @@
     "body-parser": "^1.20.2",
     "method-override": "^3.0.0",
     "express-ejs-layouts": "^2.5.1"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "chai": "^4.3.7",
+    "supertest": "^6.3.3"
   }
 }
