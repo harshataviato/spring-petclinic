@@ -1,0 +1,26 @@
+<%- include('../fragments/layout', { body: `
+  <h2>New Visit</h2>
+  <b>Pet</b>
+  <table class="table table-striped">
+    <thead><tr><th>Name</th><th>Birth Date</th><th>Type</th><th>Owner</th></tr></thead>
+    <tr><td>${pet.name}</td><td>${pet.birthDate}</td><td>${pet.type.name}</td><td>${owner.firstName} ${owner.lastName}</td></tr>
+  </table>
+
+  <form method="post" class="form-horizontal">
+    <div class="mb-3 row">
+      <label class="col-sm-2 col-form-label">Date</label>
+      <div class="col-sm-10"><input type="date" name="visitDate" class="form-control" value="${new Date().toISOString().split('T')[0]}" required /></div>
+    </div>
+    <div class="mb-3 row">
+      <label class="col-sm-2 col-form-label">Description</label>
+      <div class="col-sm-10"><input type="text" name="description" class="form-control" required /></div>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Visit</button>
+  </form>
+
+  <br><b>Previous Visits</b>
+  <table class="table table-striped">
+    <tr><th>Date</th><th>Description</th></tr>
+    ${pet.visits.map(v => `<tr><td>${v.visitDate}</td><td>${v.description}</td></tr>`).join('')}
+  </table>
+` }) %>

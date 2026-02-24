@@ -1,0 +1,26 @@
+<%- include('../fragments/layout', { body: `
+  <h2>Owner</h2>
+  <form method="post" class="form-horizontal">
+    <div class="mb-3 row">
+      <label class="col-sm-2 col-form-label">First Name</label>
+      <div class="col-sm-10"><input type="text" name="firstName" class="form-control" value="${owner.firstName || ''}" required /></div>
+    </div>
+    <div class="mb-3 row">
+      <label class="col-sm-2 col-form-label">Last Name</label>
+      <div class="col-sm-10"><input type="text" name="lastName" class="form-control" value="${owner.lastName || ''}" required /></div>
+    </div>
+    <div class="mb-3 row">
+      <label class="col-sm-2 col-form-label">Address</label>
+      <div class="col-sm-10"><input type="text" name="address" class="form-control" value="${owner.address || ''}" required /></div>
+    </div>
+    <div class="mb-3 row">
+      <label class="col-sm-2 col-form-label">City</label>
+      <div class="col-sm-10"><input type="text" name="city" class="form-control" value="${owner.city || ''}" required /></div>
+    </div>
+    <div class="mb-3 row">
+      <label class="col-sm-2 col-form-label">Telephone</label>
+      <div class="col-sm-10"><input type="text" name="telephone" class="form-control" value="${owner.telephone || ''}" required pattern="\\d{10}" /></div>
+    </div>
+    <button type="submit" class="btn btn-primary">${isNew ? 'Add Owner' : 'Update Owner'}</button>
+  </form>
+` }) %>

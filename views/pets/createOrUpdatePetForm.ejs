@@ -1,0 +1,23 @@
+<%- include('../fragments/layout', { body: `
+  <h2>${isNew ? 'New ' : ''}Pet</h2>
+  <p>Owner: ${owner.firstName} ${owner.lastName}</p>
+  <form method="post" class="form-horizontal">
+    <div class="mb-3 row">
+      <label class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-10"><input type="text" name="name" class="form-control" value="${pet.name || ''}" required /></div>
+    </div>
+    <div class="mb-3 row">
+      <label class="col-sm-2 col-form-label">Birth Date</label>
+      <div class="col-sm-10"><input type="date" name="birthDate" class="form-control" value="${pet.birthDate || ''}" required /></div>
+    </div>
+    <div class="mb-3 row">
+      <label class="col-sm-2 col-form-label">Type</label>
+      <div class="col-sm-10">
+        <select name="typeId" class="form-select">
+          ${types.map(t => `<option value="${t.id}" ${pet.typeId === t.id ? 'selected' : ''}>${t.name}</option>`).join('')}
+        </select>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">${isNew ? 'Add Pet' : 'Update Pet'}</button>
+  </form>
+` }) %>

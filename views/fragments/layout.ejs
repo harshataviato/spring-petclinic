@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PetClinic :: Node.js Version</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .navbar { border-top: 4px solid #6db33f; background-color: #34302d; }
+        .nav-link.active { background-color: #6db33f !important; }
+        .xd-container { margin-top: 40px; }
+        .footer-logo { width: 200px; margin-top: 50px; }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/"><span></span></a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link <%= url === '/' ? 'active' : '' %>" href="/"><i class="fa fa-home"></i> HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <%= url.includes('/owners') ? 'active' : '' %>" href="/owners/find"><i class="fa fa-search"></i> FIND OWNERS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <%= url.includes('/vets') ? 'active' : '' %>" href="/vets.html"><i class="fa fa-list"></i> VETERINARIANS</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container xd-container">
+    <%- body %>
+    <div class="text-center">
+        <img src="https://spring.io/images/spring-logo-9146a4d3298f110aa1f7d17105479a60.svg" class="footer-logo" alt="logo">
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
