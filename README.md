@@ -1,15 +1,15 @@
-# Node.js PetClinic
+# PetClinic Node.js Implementation
 
-A pragmatic port of the famous Spring PetClinic to Node.js using Express, Sequelize, and EJS.
+This is a Node.js port of the classic Spring PetClinic application using Express, Sequelize, and EJS.
 
-## Environment Setup
+## Installation
 
-1.  **Install Node.js**: Ensure you have Node.js version 18 or higher installed.
-2.  **Dependencies**: Install the required npm packages.
-    ```bash
-    npm install
+1. Install dependencies:
+   ```bash
+   npm install
 npm start
-npm run dev
+npm test
+npx jest --coverage --runInBand --forceExit
 
 ---
 
